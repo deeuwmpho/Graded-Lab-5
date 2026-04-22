@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. Surname Blender</title>
+
+    <script src="surname.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .boxed-title {
+            border: 4px solid black;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-bottom: 10px;
+        }
+
+        .boxed-label {
+            border: 3px solid black;
+            padding: 3px 8px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        .controls {
+            margin: 10px;
+        }
+
+        #output {
+            position: relative;
+            width: 300px;
+            height: 120px;
+            border: 2px solid black;
+            margin: 20px auto;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 class="boxed-title">Mr. Surname Blender</h1>
+
+<div class="controls">
+    <span class="boxed-label">Surname:</span>
+    <input id="surname" type="text" size="20" />
+</div>
+
+<div class="controls">
+    <span>Font:</span>
+    <select id="font">
+        <option>Arial</option>
+        <option>Verdana</option>
+        <option>Times New Roman</option>
+        <option>Comic Sans MS</option>
+    </select>
+
+    <select id="color">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+</div>
+
+<div class="controls">
+    <span>Position:</span>
+    <input id="sequential" name="pos" type="radio" value="seq" checked />
+    <input id="random" name="pos" type="radio" value="rand" /> 
+    <input id="reverse" name="pos" type="radio" value="rev" /> 
+</div>
+
+<div class="controls">
+    <input type="number" id="fontsize" placeholder="font size" value="16" />
+</div>
+
+<div class="controls">
+    <label>Letter Spacing:</label>
+    <input type="range" id="spacing" min="0" max="20" value="0" />
+</div>
+
+<div class="controls">
+    <label>Letter Size:</label>
+    <input type="range" id="lettersize" min="10" max="50" value="16" />
+</div>
+
+<div class="controls">
+    <button id="blend-btn">Blend Now</button>
+</div>
+
+<div id="output"></div>
+
+</body>
+</html>
